@@ -1,0 +1,159 @@
+Learning DevOps Day 2
+
+SDLC 
+Software Development life cycle
+
+The Software Development Life Cycle (SDLC) is a structured process used for developing software applications. It outlines the stages involved in software development, ensuring a systematic approach to planning, creating, testing, and deploying software. The main goals of the SDLC are to improve the quality of software, manage project timelines and costs, and meet user requirements effectively. It is a set of processes used by the software industry to design, develop and test software.
+
+Phases in SDLC
+
+Planning >> Defining >> Designing >> Building >> Testing >> Deploy >> Maintenance
+
+Planning: Identify the project’s scope, objectives, resources, timelines, and risks. This phase involves gathering requirements and determining feasibility.
+
+Defining: Clearly outline and document the requirements and specifications for the software. This is where stakeholders finalize what the software should do.
+
+Designing: Create architectural and interface designs. This phase includes defining system architecture, user interfaces, and database designs, ensuring everything aligns with the requirements.
+
+Building: The actual development phase where coding takes place. Developers write the software according to the design specifications, integrating all components.
+
+Testing: Validate the software for defects and ensure it meets the specified requirements. Various testing methods (unit, integration, system, user acceptance) are employed to identify and resolve issues.
+
+Deploy: Release the software to users. This may involve installation, configuration, and training, along with post-deployment support and maintenance.
+
+Maintenance: After deployment, the software may need updates, bug fixes, or enhancements based on user feedback and changing requirements. 
+
+Where does DevOps involve in this SDLC
+
+Main motive of DevOps is to improves the process to deliver the code efficiently and quickly
+DevOps engineers make sure that Building Testing Deploy phases are followed without manual interventions by automating the process. Automation leads to the efficiency of the product delivery.
+
+DevOps engineers primary responsibility is to automate the phases Building Testing Deploy of the SDLC
+
+Learning DevOps Day 3
+Topics Covered Today
+
+Server
+Physical vs Virtual Server
+Hypervisor
+
+What is a Server?
+
+A server is a computer or system that provides resources, data, services, or programs to other computers, known as clients, over a network. Servers can handle various tasks, such as hosting websites, managing databases, or providing file storage.
+
+Servers are used to deploy the applications.
+
+There are different types of servers, including web servers, application servers, database servers, and file servers, each serving specific functions in a networked environment.
+
+What is Virtual Machines
+
+A virtual machine (VM) is a software-based emulation of a physical computer. It runs an operating system and applications just like a physical machine, but it exists on a host system and shares its resources (like CPU, memory, and storage).
+
+VM is a process of efficiently utilizing the physical Server
+
+Hypervisor: Hypervisor is a software which will install a VM in the physical server.
+It will do logical isolation.
+
+Some popular Hypervisors are VMware, Xen, Oracle VM Virtual Box, Kernel Based Virtual Machine
+
+Learning DevOps Day 4
+Topics Discussed
+
+Virtual Machine Part 2
+
+Cloud Services —------------------- AWS & AZURE
+
+
+For creating X number of Virtual Machines as a part of day to day activity at the workplace, manually creating the number of virtual machines is a time taking process. By automating the Virtual machines creation we can create X number of virtual machines in a very short time.
+
+Efficiently using the automation process in AWS. AWS provides support like AWS EC2 API 
+
+AWS EC2 API: Amazon EC2 (Elastic Compute Cloud) provides a web service that allows you to launch and manage virtual servers in the cloud. The EC2 API is a set of RESTful APIs that enables developers to programmatically control and manage their EC2 instances.
+
+AWS S3 API: Amazon S3 (Simple Storage Service) is a scalable object storage service that provides high durability, availability, and performance. The S3 API allows developers to interact programmatically with S3, enabling operations like storing, retrieving, and managing data
+
+AWS EBS API: Amazon EBS Elastic Block Store is a cloud-based storage service that provides block-level storage volumes for use with Amazon EC2 instances.
+
+
+Automation process of VM Creation: 
+
+Instead of creating manual VMs by going to AWS Console. The user will write a script, by using this script they will make a call to the AWS EC2 API. In this script the user will say they want to create X number of VMs (As per need) or 1 VM it depends on the task assigned to them.
+
+The moment the API receives the request in an expected format, it will send EC2 Instance to the user.
+
+User writes Script >>>>>>>>>>>>>>>>>>>>>>AWS EC2 API (reads the format and the request) it sends the requested EC2 Instance to the >>>>>>>>>>>>>>>>>>>>> USER
+
+The request for EC2 Instance should be valid, authenticated and authorized.
+
+What is Script: Scripting refers to writing small programs or scripts that automate tasks, manipulate data, or control applications. These scripts are typically written in high-level programming languages designed for ease of use and rapid development
+
+Scripting can be done via: 
+
+Script Via AWS CLI: The AWS Command Line Interface (CLI) is a unified tool that allows you to manage AWS services from the command line. With the AWS CLI, you can control multiple AWS services using simple commands and scripts, making it a powerful tool for automation and scripting.
+
+Script Via AWS API (BOTO 3): Boto3 is a powerful and flexible tool for interacting with AWS services using Python. Its ease of use and extensive functionality make it an excellent choice for automating tasks and managing cloud resources programmatically.
+
+Script Via AWS CFT (Cloud Formation Template): AWS CloudFormation (CFT, or CloudFormation Template) is a service that allows you to define and provision AWS infrastructure as code. With CloudFormation, you can create and manage a collection of AWS resources in a predictable and repeatable manner.
+
+Script Via AWS CDK: The AWS Cloud Development Kit (CDK) is an open-source software development framework that allows you to define cloud infrastructure using familiar programming languages. With the CDK, you can build and provision AWS resources through code, enabling infrastructure as code (IaC) in a more intuitive way.
+
+Interview Questions/ Tips:
+
+What is the approach you use in the organization to create X number of VMs or what is the automation used in the organization for the infrastructure creation (VM, EC2 are infrastructure)
+
+Ans: We can answer from any one of the following. Choose the answer wisely, Choose the answer which your organization uses.
+
+If Organization follows Hybrid Cloud Model.
+
+Hybrid Cloud Model: A hybrid cloud model combines both private and public cloud environments, allowing organizations to leverage the advantages of both types of infrastructure. This approach enables greater flexibility, scalability, and efficiency in managing workloads and data.
+
+Terraform is the popular tool for creating infrastructure across multiple cloud environments
+
+If Organization follows one cloud e.g. AWS, then the answers might be any of the following.
+1. AWS CLI 2. AWS API 3. AWS CDK 4. AWS CFT
+        
+
+Creating EC2 Instance VIA AWS Cosole
+https://aws.amazon.com › aws_management › console
+Click on the Services >> Choose EC2 >> Go to instances >> Launch Instance >> Provide random name of the instance >> Choose the OS (Ubuntu) >> Choose Instance type free tier i.e, t2. micro>> Key Pair login >> Create new key pair >> key pair name >> Key Pair Type  RSA>> Private key file format .pem >> Create Key Value Pair >> launch Instance.
+
+Learning DevOps Day 6
+
+> Operating System and Shell Scripting
+
+OS is a medium between hardware and software.
+
+Linux, Windows are considered as examples of OS
+
+
+LINUX
+Linux is an operating system, it is an open source operating, and very secure operating system.
+
+Linux is an open-source operating system (OS) based on UNIX, widely used for various types of devices, from personal computers and servers to mobile devices, routers, and even supercomputers. Created by Linus Torvalds in 1991, it’s become popular due to its flexibility, security, and scalability, as well as its active global developer community.
+
+Linux is widely used by developers, system administrators, and tech enthusiasts, and it’s essential for roles in areas like DevOps, cloud, and software engineering.
+ 
+Linux is Free Open Sources, Secure, it has many distributions like ubuntu centos redhat and it is vey fast.
+
+
+ARCHITECTURE OF OS
+
+User Processes Compilers System related Softwares
+SYSTEM LIBRARIES
+KERNAL
+OPERATING SYSTEM
+
+WHAT IS KERNAL
+
+The Kernel is the core component of an operating system (OS) responsible for managing system resources and enabling communication between hardware and software. Acting as a bridge between the hardware and application layers, the kernel provides essential services for all other OS components, managing tasks such as memory, processes, and device control.
+				
+Main 4 primary responsibilities of Kernel
+
+Kernel is the heart of the OS.
+						
+Device Management
+Memory Management
+Process Management
+Handling System Calls
+
+
